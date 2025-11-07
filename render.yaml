@@ -2,8 +2,9 @@ services:
   - type: web
     name: skenetic-mail-automation
     env: docker
-    image: n8nio/n8n
     plan: free
+    image:
+      url: n8nio/n8n
     disks:
       - name: n8n-data
         mountPath: /home/node/.n8n
