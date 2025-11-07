@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: skenetic-mail-automation
+    env: docker
+    image:
+      url: n8nio/n8n
+    plan: free
+    disks:
+      - name: n8n-data
+        mountPath: /home/node/.n8n
+        sizeGB: 1
+    envVars:
+      - key: GENERIC_TIMEZONE
+        value: Asia/Kolkata
